@@ -1,0 +1,89 @@
+''' 
+1. Hány szám van a listában?
+Készíts függvényt lista_elemek_szama() néven,  amely visszatér egy lista elemeinek a számával 
+
+2. Melyik a legkisebb szám a listában?
+Készíts függvényt legkisebb() néven,  amely visszatér egy számokat tartalmazó lista legkisebb számával.
+
+3. Mennyi a lista számainak összege?
+Készíts függvényt osszeg() néven,  amely visszatér egy számokat tartalmazó lista számainak összegével.
+
+4. Mennyi a lista számainak szorzata?
+Készíts függvényt szorzat() néven,  amely visszatér egy számokat tartalmazó lista számainak szorzatával.
+
+5. Melyik a legnagobb szám a listában?
+Készíts függvényt legnagyobb() néven,  amely visszatér egy számokat tartalmazó lista legnagyobb számával.
+
+6. Melyik a legelső szám a listában?
+Készíts függvényt legelso() néven,  amely visszatér egy számokat tartalmazó lista legelso számával.
+
+7. Melyik a utolso szám a listában?
+Készíts függvényt utolso() néven,  amely visszatér egy számokat tartalmazó lista utolso számával.
+
+8. Mennyi a páros számok száma a listában?
+Készíts függvényt parosok_szama() néven,  amely visszatér egy számokat tartalmazó lista páros számainak számával.
+
+9. Első kettő.
+Készíts függvényt elso_ketto() néven,  amely visszatér egy számokat tartalmazó lista első két számával mint listával.
+
+10. Első és utolsó
+Készíts függvényt elso_utolso() néven,  amely visszatér egy számokat tartalmazó lista első ás utolsó számával mint listával.
+'''
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+
+#1. feladat
+def lista_elemek_szama(a):
+    return len(a)
+print(lista_elemek_szama(lista))
+    
+#2. feladat
+def legkisebb(a):
+    return min(a)
+print(legkisebb(lista))
+
+#3. feladat
+def osszeg(a):
+    return sum(a)
+print(osszeg(lista))
+
+#4. feladat 
+def szorzat(lista):
+    szorzat = 1
+    for i in lista:
+        szorzat *= i
+    return szorzat 
+
+#5. feladat
+def legnagyobb(a):
+    return max(a)
+print(legnagyobb(lista))
+
+#6. feladat
+def legelso(a):
+    return a[0]
+print(legelso(lista))
+
+#7. feladat 
+def utolso(a):
+    return a[-1]
+print(utolso(lista))
+
+#8. feladat
+def parosok_szama(a):
+    szamlalo = 0
+    for i in a:
+        if i % 2 == 0:
+            szamlalo += 1
+    return szamlalo
+print(parosok_szama(lista))
+
+#9. feladat
+def elso_ketto(a):
+    return [a[0], a[1]]
+print(elso_ketto(lista))
+
+#10. feladat
+def elso_utolso(a):
+    return [a[0], a[-1]]
+print(elso_utolso(lista))
